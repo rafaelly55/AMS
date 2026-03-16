@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="29.6.3">
+  <diagram name="Página-1" id="IEsBYQdZClW8J5SLBWnc">
+    <mxGraphModel dx="1106" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a4W3yVdORRl3RuhlM5Qw-3" edge="1" parent="1" source="a4W3yVdORRl3RuhlM5Qw-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#028090;fontColor=default;" target="a4W3yVdORRl3RuhlM5Qw-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4W3yVdORRl3RuhlM5Qw-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#F45B69;strokeColor=#028090;fontColor=#E4FDE1;rounded=0;" value="Início" vertex="1">
+          <mxGeometry height="80" width="120" x="340" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="a4W3yVdORRl3RuhlM5Qw-7" edge="1" parent="1" source="a4W3yVdORRl3RuhlM5Qw-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#028090;fontColor=default;" target="a4W3yVdORRl3RuhlM5Qw-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4W3yVdORRl3RuhlM5Qw-2" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#F45B69;strokeColor=#028090;fontColor=#E4FDE1;rounded=0;" value="Pegar duas fatias de pão" vertex="1">
+          <mxGeometry height="60" width="160" x="320" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="a4W3yVdORRl3RuhlM5Qw-16" edge="1" parent="1" source="a4W3yVdORRl3RuhlM5Qw-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#028090;labelBackgroundColor=none;fontColor=default;" target="a4W3yVdORRl3RuhlM5Qw-11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4W3yVdORRl3RuhlM5Qw-4" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#F45B69;strokeColor=#028090;fontColor=#E4FDE1;rounded=0;" value="&amp;nbsp;pegar uma fatia de queijo e presunto" vertex="1">
+          <mxGeometry height="60" width="190" x="305" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="a4W3yVdORRl3RuhlM5Qw-17" edge="1" parent="1" source="a4W3yVdORRl3RuhlM5Qw-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#028090;labelBackgroundColor=none;fontColor=default;" target="a4W3yVdORRl3RuhlM5Qw-14" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4W3yVdORRl3RuhlM5Qw-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#F45B69;strokeColor=#028090;fontColor=#E4FDE1;" value="Montar o lanche e esquentar no micro-ondas por 30 segundos" vertex="1">
+          <mxGeometry height="70" width="200" x="300" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="a4W3yVdORRl3RuhlM5Qw-14" parent="1" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#F45B69;strokeColor=#028090;fontColor=#E4FDE1;rounded=0;" value="Fim" vertex="1">
+          <mxGeometry height="80" width="120" x="340" y="420" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
