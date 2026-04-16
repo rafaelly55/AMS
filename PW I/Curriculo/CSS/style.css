@@ -96,7 +96,7 @@ h2{
     line-height: 40px;
 }
 
-p, blockquote{
+p, blockquote,figcaption{
     text-align: center;
     line-height: 26px;
 }
