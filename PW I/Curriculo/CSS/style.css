@@ -11,9 +11,9 @@
 
     --fonte-padrao: Arial, Tahoma, Verdana;
     --font-base: 18px;
-    --line-base: 28px;
+    --line-base: 38px;
     --radius: 5px;
-    --espaco-padrao: 10px;
+    --espaco-padrao: 30px;
 }
 
 *{
@@ -78,6 +78,10 @@ ul li ol li{
 }
 
 footer p{
+    line-height: 25px;
+}
+
+footer{
     width: 100%;
     height: 25px;
     background: var(--cor-footer);
@@ -85,4 +89,35 @@ footer p{
     bottom: 0;
     display: block;
     clear: both;
+}
+
+/*Configurações das páginas da pasta Pages*/
+h2{
+    line-height: 40px;
+}
+
+p, blockquote{
+    text-align: center;
+    line-height: 26px;
+}
+
+hr{
+    margin: var(--espaco-padrao);
+}
+
+figure{
+    width: 105px;
+    height: 105px;
+    background: var(--cor-branca);
+    border-radius: 75px;
+    margin: var(--espaco-padrao) auto;
+    border: 1px solid var(--cor-branca);
+    box-shadow: 0px 1px 2px var(--cor-sombra);
+}
+
+img{
+    width: 70px;
+    position: relative;
+    margin-left: 18px;
+    margin-top: 17px;
 }
