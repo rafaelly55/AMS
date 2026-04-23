@@ -85,10 +85,11 @@ footer{
     width: 100%;
     height: 25px;
     background: var(--cor-footer);
-    position: absolute;
+    position: fixed;
     bottom: 0;
     display: block;
     clear: both;
+    text-align: center;
 }
 
 /*Configurações das páginas da pasta Pages*/
