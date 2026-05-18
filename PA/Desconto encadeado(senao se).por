@@ -1,0 +1,23 @@
+programa {
+    funcao inicio() {
+        real valorCompra, valorReal, desconto, resultadoPorcento
+
+        escreva("Digite o valor da compra: ")
+        leia(valorCompra)
+
+        se (valorCompra > 1000) {
+            desconto = valorCompra * 0.15
+        }
+        senao se (valorCompra >= 500) {
+            desconto = valorCompra * 0.10
+        }
+        senao {
+            desconto = valorCompra * 0.05
+        }
+
+        valorReal = valorCompra - desconto
+
+        escreva("Desconto aplicado R$: ", desconto, "\n")
+        escreva("Valor final: R$: ", valorReal)
+    }
+}
