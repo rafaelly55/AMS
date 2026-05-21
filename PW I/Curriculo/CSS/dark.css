@@ -6,7 +6,7 @@
     --cor-texto: #222;
     --cor-branca: #fff;
     --cor-borda: #cecece;
-    --cor-sobra: #ccc;
+    --cor-sombra: #ccc;
 }
 
 /*MODO ESCURO*/
@@ -14,19 +14,30 @@
      --cor-fundo: #121212;
     --cor-header: #1f1f1f;
     --cor-footer: #2c2c2c;
-    --cor-texto: #f1f1f1;
+    --cor-texto: #000000;
     --cor-branca: #1e1e1e;
     --cor-borda: #444;
     --cor-sobra: #000;
+    --cor-menu: #f6f6f6;
+     --bg-image: url('../imagens/fundo2.webp');
+    --overlay-opacity: 0.7;
+
 }
 
 *{
     transition: all 0.5s ease;
 }
+.dark.html,
 
-body {
-    background: var(--cor-fundo);
-    color:  var(--cor-texto);
+.dark body {
+   background:
+   linear-gradient(
+    rgba(0, 0, 0, var(--overlay-opacity)),
+    rgba(0, 0, 0, var(--overlay-opacity))
+   ),
+   var(--bg-image) no-repeat center center fixed;
+
+   background-size: cover ;
 }
 
 header {
@@ -34,7 +45,7 @@ header {
 }
 
 h1 { 
-    color: var(--cor-texto);
+    color: var(--cor-menu);
 }
 
 footer {
