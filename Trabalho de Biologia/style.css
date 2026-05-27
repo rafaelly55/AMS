@@ -1,0 +1,21 @@
+:root {
+  --cor-primaria: #4C3D19;
+  --cor-segunda: #354024;
+  --cor-terciaria: #889063;
+  --cor-quartenaria: #CFBB99;
+  --cor-quintenaria: #E5D7C4;
+}
+
+
+.titulo__inicial {
+    color: #f6f6f6;
+   font-size: 70px;
+   height: 70%;
+}
+
+.sub__titulo {
+    color: #f6f6f6;
+    font-size: 50px;
+    height: 60%;
+}
+
