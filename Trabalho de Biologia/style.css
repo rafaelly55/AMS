@@ -1,21 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 :root {
   --cor-primaria: #4C3D19;
-  --cor-segunda: #354024;
+  --cor-segundaria: #354024;
   --cor-terciaria: #889063;
   --cor-quartenaria: #CFBB99;
   --cor-quintenaria: #E5D7C4;
+  --cor-branca: #f6f6f6;
+  --fonte-Ds: 'Dancing Script'
 }
 
 
 .titulo__inicial {
-    color: #f6f6f6;
+    color: var(--cor-branca);
    font-size: 70px;
-   height: 70%;
+   height: 100%;
+   font-family: var(--fonte-Ds);
+   background-color: var(--cor-primaria);
 }
 
 .sub__titulo {
-    color: #f6f6f6;
+    color: var(--cor-branca);
     font-size: 50px;
-    height: 60%;
+    height: 100%;
+    font-family: var(--fonte-Ds);
+    background-color: var(--cor-primaria);
 }
 
