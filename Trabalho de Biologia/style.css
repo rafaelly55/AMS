@@ -12,11 +12,13 @@
 
 .titulo__inicial {
     height: 50px;
+    text-align: center;
 }
 
 .navegacao__div {
  display: flex;
   flex-direction: column;
+  text-align: center;
    height: 100%;
    margin-top: auto;
    text-shadow: 1px 1px 2px green, 0 0 1em green, 0 0 0.2em green;
@@ -33,6 +35,7 @@
   color: var(--cor-branca);
   font-size: 50px;
   font-family: var(--fonte-Ds);
+  background-color: var(--cor-primaria);
 }
 
 /* animacao */
@@ -60,16 +63,24 @@
   left: 0;
 }
 
+.botao{
+  padding:2%;
+
+}
+
 .btn {
-  padding: 15px 35px;
-  background-color: var(--cor-primaria);
+  padding: 15px 30px;
+  /* display: grid; */
+  display: inline-block;
+  justify-content: center;
+  background-color:  var(--cor-primaria);
   color: #f6f6f6;
   text-decoration: none;
   text-shadow: 1px 1px 2px #354024, 0 0 1em #354024, 0 0 0.2em #354024;
   border-radius: 30px;
   font-size: 20px;
   font-family: var(--fonte-Ds);
-  transition: 0.4s;
+ 
 }
 
 .btn:houver {
