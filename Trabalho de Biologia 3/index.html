@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trabalho de Biologia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── CSS Variables (seu style.css) ── */
+    :root {
+      --cor-primaria:    #4C3D19;
+      --cor-secundaria:  #354024;
+      --cor-terciaria:   #889063;
+      --cor-quartenaria: #CFBB99;
+      --cor-quintenaria: #E5D7C4;
+      --cor-branca:      #f6f6f6;
+      --fonte-Ds: 'Dancing Script', cursive;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    /* ── Background com imagem gerada por IA (substitua pelo seu ChatGPT Image) ── */
+    body {
+      background-image: url('bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    /* ── Overlay escuro suave sobre a imagem ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(30, 40, 20, 0.35);
+      z-index: 0;
+    }
+
+    /* ── Navegação (header) ── */
+    .navegacao {
+      position: relative;
+      z-index: 1;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ── Div central com título ── */
+    .navegacao__div {
+      height: 60vh;
+      flex-direction: column;
+      display: flex;
+      text-align: center;
+      margin-top: auto;
+      text-shadow:
+        1px 1px 2px green,
+        0 0 1em green,
+        0 0 0.2em green;
+      color: var(--cor-branca);
+      font-size: 70px;
+      font-family: var(--fonte-Ds);
+
+      /* Animação de entrada */
+      opacity: 0;
+      transform: translateY(-40px);
+      animation: fadeDown 1.2s cubic-bezier(.22,1,.36,1) 0.3s forwards;
+    }
+
+    /* ── Título principal ── */
+    .titulo__inicial {
+      text-align: center;
+    }
+
+    /* ── Subtítulo ── */
+    .sub__titulo {
+      height: 1vh;
+      flex-direction: column;
+      margin-top: auto;
+      text-shadow:
+        1px 1px 2px green,
+        0 0 1em green,
+        0 0 0.2em green;
+      color: var(--cor-branca);
+      font-size: 50px;
+      font-family: var(--fonte-Ds);
+
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1.2s cubic-bezier(.22,1,.36,1) 0.7s forwards;
+    }
+
+    /* ── Botão wrapper ── */
+    .botao {
+      padding: 2%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 0.5vh;
+      margin-top: 60px;
+
+      opacity: 0;
+      animation: fadeIn 1s ease 1.3s forwards;
+    }
+
+    /* ── Botão .btn ── */
+    .btn {
+      padding: 15px 25px;
+      background-color: var(--cor-primaria);
+      color: #f6f6f6;
+      text-decoration: none;
+      text-shadow:
+        1px 1px 2px #354024,
+        0 0 1em #354024,
+        0 0 0.2em #354024;
+      border-radius: 30px;
+      font-size: 50px;
+      font-family: var(--fonte-Ds);
+      border: 2px solid transparent;
+      transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: var(--cor-terciaria);
+      transform: scale(1.05);
+      border-color: var(--cor-quintenaria);
+    }
+
+    /* ── Animação de saída para CIMA ── */
+    .transition {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        135deg,
+        #4C3D19,
+        #354024,
+        #889063,
+        #CFBB99,
+        #E5D7C4
+      );
+      z-index: 9999;
+      transition: top 0.8s cubic-bezier(.76,0,.24,1);
+    }
+
+    .transition.active {
+      top: 0;
+    }
+
+    /* ── Animação de entrada vinda de baixo (load) ── */
+    .transition.intro {
+      top: 0;
+      transition: top 0.9s cubic-bezier(.76,0,.24,1);
+    }
+
+    .transition.intro.done {
+      top: -100%;
+    }
+
+    /* ── Partículas decorativas ── */
+    .particles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .leaf {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50% 0 50% 0;
+      opacity: 0;
+      animation: floatLeaf linear infinite;
+    }
+
+    @keyframes floatLeaf {
+      0%   { transform: translateY(110vh) rotate(0deg);   opacity: 0; }
+      10%  { opacity: 0.6; }
+      90%  { opacity: 0.4; }
+      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+    }
+
+    /* ── Keyframes de entrada ── */
+    @keyframes fadeDown {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* ── Brilho pulsante no título ── */
+    .titulo__inicial {
+      animation: fadeDown 1.2s cubic-bezier(.22,1,.36,1) 0.3s both,
+                 glow 3s ease-in-out 1.6s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 1px 1px 2px green, 0 0 1em green, 0 0 0.2em green; }
+      to   { text-shadow: 1px 1px 4px #6abf4b, 0 0 2em #6abf4b, 0 0 0.5em #6abf4b; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Partículas de folhas -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Overlay de transição (entrada) -->
+  <div class="transition intro" id="transitionEl"></div>
+
+  <header class="navegacao">
+    <div class="navegacao__div">
+      <h1 class="titulo__inicial">EcoScan</h1>
+      <h2 class="sub__titulo">Conectando hoje, salvando o amanhã</h2>
+    </div>
+
+    <div class="botao">
+      <a href="pagina2.html" class="btn">Entrar</a>
+    </div>
+  </header>
+
+  <script>
+    /* ── Animação de entrada: painel sai para cima ao carregar ── */
+    const transitionEl = document.getElementById('transitionEl');
+
+    window.addEventListener('load', () => {
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          transitionEl.classList.add('done');
+        }, 100);
+      });
+    });
+
+    /* ── Animação de saída para cima ao clicar em links ── */
+    const links = document.querySelectorAll('a.btn');
+
+    links.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const destino = this.href;
+
+        // Remove classe intro para usar a transição de saída
+        transitionEl.classList.remove('intro', 'done');
+        transitionEl.classList.add('active');
+
+        setTimeout(() => {
+          window.location.href = destino;
+        }, 850);
+      });
+    });
+
+    /* ── Gera partículas flutuantes ── */
+    const container = document.getElementById('particles');
+    const colors = ['#4C3D19','#354024','#889063','#CFBB99','#E5D7C4','#6abf4b'];
+
+    for (let i = 0; i < 22; i++) {
+      const leaf = document.createElement('div');
+      leaf.className = 'leaf';
+      leaf.style.left     = Math.random() * 100 + 'vw';
+      leaf.style.width    = (6 + Math.random() * 10) + 'px';
+      leaf.style.height   = leaf.style.width;
+      leaf.style.background = colors[Math.floor(Math.random() * colors.length)];
+      leaf.style.animationDuration  = (8 + Math.random() * 14) + 's';
+      leaf.style.animationDelay     = (Math.random() * 12) + 's';
+      container.appendChild(leaf);
+    }
+  </script>
+</body>
+</html>
