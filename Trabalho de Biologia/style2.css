@@ -1,0 +1,18 @@
+ :root {
+  --cor-primaria:    #4C3D19;
+  --cor-secundaria:  #354024;
+  --cor-terciaria:   #889063;
+  --cor-quartenaria: #CFBB99;
+  --cor-quintenaria: #E5D7C4;
+  --cor-branca:      #f6f6f6;
+  --text-shadow: #0D530E;
+ }
+
+ body {
+    background: none;
+ }
+
+ .h1__inicial {
+    font-size: 30px;
+    color: var(--cor-primaria);
+ }
