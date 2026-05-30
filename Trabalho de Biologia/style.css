@@ -1,88 +1,173 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap");
+
 :root {
-  --cor-primaria: #4C3D19;
-  --cor-segundaria: #354024;
-  --cor-terciaria: #889063;
+  --cor-primaria:    #4C3D19;
+  --cor-secundaria:  #354024;
+  --cor-terciaria:   #889063;
   --cor-quartenaria: #CFBB99;
   --cor-quintenaria: #E5D7C4;
-  --cor-branca: #f6f6f6;
-  --fonte-Ds: 'Dancing Script';
-}
-.navegacao {
- height: 100vh; 
+  --cor-branca:      #f6f6f6;
+  text-shadow: #0D530E;
+  --fonte-Ds: 'Dancing Script', cursive;
 }
 
-.navegacao__div {
- /* display: flex; */
-  height: 60vh; 
-  flex-direction: column;
-  text-align: center;
-   margin-top: auto;
-   text-shadow: 1px 1px 2px green, 0 0 1em green, 0 0 0.2em green;
-    color: var(--cor-branca);
-   font-size: 70px;
-   font-family: var(--fonte-Ds);
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
+
+body {
+  background-image: url(ChatGPT\ Image\ 30\ de\ mai.\ de\ 2026\,\ 16_06_50.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+.navegacao {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+
+.navegacao__div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  animation: fadeDown 1s ease forwards;
+}
+
 
 .titulo__inicial {
   text-align: center;
+  text-shadow:
+    1px 1px 2px #0D530E,
+    0 0 1em green,
+    0 0 0.2em #0D530E;
+  color: var(--cor-branca);
+  font-size: 90px;
+  font-family: var(--fonte-Ds);
+  margin: 0;
+  animation: fadeDown 1s ease forwards;
 }
+
 
 .sub__titulo {
-  /* display: flex; */
-  height: 1vh;
-  flex-direction: column;
-   margin-top: auto;
-  text-shadow: 1px 1px 2px green, 0 0 1em green, 0 0 0.2em green;
+  text-align: center;
+  text-shadow:
+    1px 1px 2px #0D530E,
+    0 0 1em green,
+    0 0 0.2em #0D530E;
   color: var(--cor-branca);
-  font-size: 50px;
+  font-size: 36px;
   font-family: var(--fonte-Ds);
+  margin: 0;
+  animation: fadeUp 1s ease 0.4s both;
 }
 
-/* animacao */
+
+.botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeUp 1s ease 0.8s both;
+}
+
+
+.btn {
+  padding: 14px 40px;
+  background-color: var(--cor-primaria);
+  color: var(--cor-branca);
+  text-decoration: none;
+  text-shadow:
+    1px 1px 2px #354024,
+    0 0 1em #354024,
+    0 0 0.2em #354024;
+  border-radius: 30px;
+  font-size: 42px;
+  font-family: var(--fonte-Ds);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--cor-terciaria);
+  transform: scale(1.05);
+}
+
+
 .transition {
   position: fixed;
   top: -100%;
-  left: 0%;
+  left: 0;
   width: 100%;
   height: 100%;
   background: linear-gradient(
     135deg,
     #4C3D19,
-    #354024,
-    #889063,
-    #CFBB99,
-    #E5D7C4
+    #0D530E,
+    #468432,
+    #9AD872,
+    #6FAF4F
   );
-
   z-index: 9999;
-  transition: 0.8s ease-in-out;
+  transition: top 0.8s ease-in-out;
 }
 
 .transition.active {
   top: 0;
 }
 
-.botao{
-  padding:2%;
-  display: flex; /* Ativa o Flexbox */
-  justify-content: center; /* Centraliza na horizontal */
-  align-items: center; /* Centraliza na vertical */
-  height: 0.5vh; 
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.btn {
-  padding: 15px 25px;
-  background-color:  var(--cor-primaria);
-  color: #f6f6f6;
-  text-decoration: none;
-  text-shadow: 1px 1px 2px #354024, 0 0 1em #354024, 0 0 0.2em #354024;
-  border-radius: 30px;
-  font-size: 50px;
-  font-family: var(--fonte-Ds);
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.btn:houver {
-  background-color: var(--cor-terciaria);
-  transform: scale(1.05);
+/* Estrutura da folha */
+.folha {
+  position: absolute;
+  top: -10%;
+  width: 30px;
+  height: 30px;
+  background-color: #4caf50; /* Cor da folha */
+  border-radius: 0 50% 50% 50%; /* Formato clássico de folha */
+  opacity: 0.8;
+  animation: cairFolha 8s linear infinite;
+}
+
+/* Definição do movimento e rotação */
+@keyframes cairFolha {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(50vh) translateX(50px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(110vh) translateX(-50px) rotate(360deg);
+  }
 }
