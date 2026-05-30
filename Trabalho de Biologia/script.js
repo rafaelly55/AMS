@@ -1,4 +1,4 @@
- const transition =
+const transition =
 document.querySelector(".transition");
 const links = document.querySelectorAll("nav a");
 
