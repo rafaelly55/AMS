@@ -7,7 +7,7 @@
   --cor-quartenaria: #CFBB99;
   --cor-quintenaria: #E5D7C4;
   --cor-branca:      #f6f6f6;
-  text-shadow: #0D530E;
+  --text-shadow: #0D530E;
   --fonte-Ds: 'Dancing Script', cursive;
 }
 
@@ -52,7 +52,7 @@ body {
     1px 1px 2px #0D530E,
     0 0 1em green,
     0 0 0.2em #0D530E;
-  color: var(--cor-branca);
+  color: var(--text-shadow);
   font-size: 90px;
   font-family: var(--fonte-Ds);
   margin: 0;
@@ -66,7 +66,7 @@ body {
     1px 1px 2px #0D530E,
     0 0 1em green,
     0 0 0.2em #0D530E;
-  color: var(--cor-branca);
+  color: var(--text-shadow);
   font-size: 36px;
   font-family: var(--fonte-Ds);
   margin: 0;
@@ -124,6 +124,7 @@ body {
 .transition.active {
   top: 0;
 }
+
 
 @keyframes fadeDown {
   from {

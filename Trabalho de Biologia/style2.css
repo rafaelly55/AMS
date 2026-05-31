@@ -1,3 +1,5 @@
+ @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
  :root {
   --cor-primaria:    #4C3D19;
   --cor-secundaria:  #354024;
@@ -6,13 +8,84 @@
   --cor-quintenaria: #E5D7C4;
   --cor-branca:      #f6f6f6;
   --text-shadow: #0D530E;
+  --fonte-Kr: 'Krona One', sans-serif;
+  --fonte-Ms: 'Montserrat',sans-serif;
  }
 
  body {
-    background: none;
+    background: url(3.png);
  }
 
  .h1__inicial {
     font-size: 30px;
     color: var(--cor-primaria);
+    font-family: var(--fonte-Ms);
  }
+
+ .h2__sub {
+   color: var(--cor-primaria);
+   font-size: 15px;
+   font-family: var(--fonte-Ms);
+ }
+
+ .h3__h3 {
+   color: var(--cor-primaria);
+   font-size: 15px;
+   font-family: var(--fonte-Ms);
+ }
+
+ .nav__barra {
+   position: relative;
+   text-align: left;
+   direction: ltr;
+   display: inline-flex;
+   align-items: center;
+   gap: 8px;
+   padding: 15px 20px;
+    text-shadow:
+    1px 1px 2px #0D530E,
+    0 0 1em green,
+    0 0 0.2em #0D530E;
+   background: rgba(93, 216, 68, 0.836);
+   border-radius: 60px;
+   backdrop-filter: blur(15px);
+   box-shadow: 0.5 solid var(--cor-branca);
+ }
+
+ .nav__barra ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-direction: row;
+   gap: 12px;
+   align-items: center;
+ }
+
+ .nav__barra ul li a {
+   text-decoration: none;
+   color: var(--cor-branca);
+   font-weight: 600;
+   font-size: 0.95rem;
+   padding: 8px 16px;
+   border-radius: 20px;
+   display: inline-block;
+   transition: transform 0.25s ease, background 0.3 ease, color 0.3 ease;
+   transition: background 0.3 ease, color 0.3 ease;
+   white-space: nowrap; 
+ }
+
+ .nav__barra ul li a:houver {
+   background: var(--cor-branca);
+   color: #fff;
+   transform: scale(1.15);
+   transform-origin: center;
+   transition: transform 0.25 ease, background 0.3 ease, color 0.3s ease;
+ }
+
+ .nav__barra ul li a.ativo {
+   background: var(--cor-branca);
+   color: #fff;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+ }
+
