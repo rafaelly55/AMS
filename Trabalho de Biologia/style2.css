@@ -13,25 +13,41 @@
  }
 
  body {
-    background: url(3.png);
+    background: url(ChatGPT\ Image\ 30\ de\ mai.\ de\ 2026\,\ 16_06_50.png);
  }
 
  .h1__inicial {
     font-size: 30px;
-    color: var(--cor-primaria);
+    text-align: left;
+    color: var(--text-shadow);
     font-family: var(--fonte-Ms);
+    text-shadow:
+    1px 1px 2px #227923,
+    0 0 1em green,
+    0 0 0.2em #207022;
  }
 
  .h2__sub {
    color: var(--cor-primaria);
-   font-size: 15px;
-   font-family: var(--fonte-Ms);
+   text-align: left;
+   font-size: 25px;
+   /*font-family: var(--fonte-Ms); 
+    text-shadow:
+    1px 1px 2px #064407,
+    0 0 1em green,
+    0 0 0.2em #074a09; */
  }
 
  .h3__h3 {
    color: var(--cor-primaria);
-   font-size: 15px;
-   font-family: var(--fonte-Ms);
+   text-align: left;
+   
+   font-size: 25px;
+   /*font-family: var(--fonte-Ms); 
+    text-shadow:
+    1px 1px 2px #064407,
+    0 0 1em green,
+    0 0 0.2em #074a09; */
  }
 
  .nav__barra {
@@ -46,7 +62,7 @@
     1px 1px 2px #0D530E,
     0 0 1em green,
     0 0 0.2em #0D530E;
-   background: rgba(93, 216, 68, 0.836);
+   background: rgba(56, 87, 26, 0.836);
    border-radius: 60px;
    backdrop-filter: blur(15px);
    box-shadow: 0.5 solid var(--cor-branca);
@@ -55,6 +71,7 @@
  .nav__barra ul {
    list-style: none;
    margin: 0;
+   text-align: left;
    padding: 0;
    display: flex;
    flex-direction: row;
@@ -64,9 +81,13 @@
 
  .nav__barra ul li a {
    text-decoration: none;
-   color: var(--cor-branca);
+   color: #000;
+    text-shadow:
+    1px 1px 2px #f4f7f4,
+    0 0 1em rgb(216, 221, 216),
+    0 0 0.2em #d9e6d9;
    font-weight: 600;
-   font-size: 0.95rem;
+   font-size: 1.5rem;
    padding: 8px 16px;
    border-radius: 20px;
    display: inline-block;
@@ -89,3 +110,7 @@
    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
  }
 
+ .alinhamento {
+  display: flex;
+  justify-content:flex-end;
+ }
