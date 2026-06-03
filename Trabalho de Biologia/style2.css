@@ -18,7 +18,7 @@
 
  .h1__inicial {
     font-size: 30px;
-    text-align: left;
+    text-align: center;
     color: var(--text-shadow);
     font-family: var(--fonte-Ms);
     text-shadow:
@@ -28,9 +28,13 @@
  }
 
  .h2__sub {
-   color: var(--cor-primaria);
-   text-align: left;
+   color: #fff;
+   text-align: center;
    font-size: 25px;
+   text-shadow:
+    1px 1px 2px #202420,
+    0 0 1em rgb(49, 56, 49),
+    0 0 0.2em #283f28;
    /*font-family: var(--fonte-Ms); 
     text-shadow:
     1px 1px 2px #064407,
@@ -39,10 +43,13 @@
  }
 
  .h3__h3 {
-   color: var(--cor-primaria);
-   text-align: left;
-   
+   color: #fff;
+   text-align: center;
    font-size: 25px;
+   text-shadow:
+    1px 1px 2px #202420,
+    0 0 1em rgb(49, 56, 49),
+    0 0 0.2em #283f28;
    /*font-family: var(--fonte-Ms); 
     text-shadow:
     1px 1px 2px #064407,
@@ -112,5 +119,6 @@
 
  .alinhamento {
   display: flex;
-  justify-content:flex-end;
+  justify-content:center;
+   
  }
