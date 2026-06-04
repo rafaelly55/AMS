@@ -122,3 +122,128 @@
   justify-content:center;
    
  }
+
+  .Objetos__flutuantes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
+    border-radius: 15px;
+  }
+
+ .Pilha, .Celular, .Computador {
+  height: 150px;
+  width: 150px;
+  object-fit: contain;
+  cursor: pointer;
+ }
+
+
+/* CARROSSEL WRAPPER */
+.carrossel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 30px 0 40px;
+}
+
+/* FAIXAS DE FADE NAS BORDAS */
+.carrossel-wrapper::before,
+.carrossel-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+.carrossel-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #eef7ee, transparent);
+}
+.carrossel-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #f4faf0, transparent);
+}
+
+/* TRILHA QUE DESLIZA */
+.carrossel-trilha {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: deslizar 18s linear infinite;
+}
+.carrossel-trilha:hover {
+  animation-play-state: paused;
+}
+
+@keyframes deslizar {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* CARD */
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 24px 20px;
+  width: 180px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  border: 2px solid transparent;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  flex-shrink: 0;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 14px 32px rgba(46,125,50,0.22);
+  border-color: #66bb6a;
+}
+
+/* OVERLAY */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 200;
+  justify-content: center;
+  align-items: center;
+}
+.overlay.ativo {
+  display: flex;
+  animation: fadeIn 0.2s ease;
+}
+
+/* MODAL */
+.modal {
+  background: white;
+  border-radius: 24px;
+  max-width: 460px;
+  width: 92%;
+  padding: 36px 28px 28px;
+  position: relative;
+  animation: slideUp 0.3s ease;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+}
+.modal-fechar {
+  position: absolute;
+  top: 14px; right: 16px;
+  background: #f1f1f1;
+  border: none;
+  border-radius: 50%;
+  width: 32px; height: 32px;
+  cursor: pointer;
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
