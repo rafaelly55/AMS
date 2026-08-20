@@ -39,7 +39,7 @@ h1 {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0. 4);
 }
 
-.elemento:hoover{
+.elemento:hover{
     transform:scale(1.1);
     box-shadow: 0 0 15px rgba (255,255,255, 0.5);
 }
@@ -91,3 +91,28 @@ h1 {
 .lantanideo{ background: #b987f0;}
 .actinideo{ background: #f5a07c;}
 .desconhecido{ background:#5a5d60;}
+
+@media (max-widht: 1400px){
+     .tabela {
+        grid-template-columns: repeat(18, 55px);
+     }
+
+     .elemento {
+        width: 55px;
+        height: 55px;
+     }
+
+     .simbolo {
+        font-size: 18px;
+     }
+}
+
+@media (max-widht: 1000px) {
+    body {
+      overflow-x: auto;
+    }
+
+    .tabela {
+        width: max-content;
+    }
+}
