@@ -1,5 +1,3 @@
-
-
 programa
 {
     funcao inicio()
